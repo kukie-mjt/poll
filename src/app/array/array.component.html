@@ -1,0 +1,48 @@
+<h2>
+    <!-- {{name}} -->
+  <h2>
+    
+<div class= "row"> 
+
+    <input type="text" style="text-align:center" value =" " [(ngModel)]="nme">
+
+  
+
+</div>
+
+<div>
+<button mat-raised-button color="primary" class="mt-40" (click)="addString()">
+
+  Add New Report
+
+</button>
+<i class="material-icons material-icons--outline">
+
+
+</i>
+<div cdkDropList class="example-list mt-20" (cdkDropListDropped)="drop($event)">  
+	<div class="example-box" *ngFor="let artist of stringlist, index as i" cdkDrag>
+    <div class="drag-index">{{i+1}}</div>
+		<div class="w-10 drag-icon">
+      <i class="material-icons ">reorder</i>
+      <i  class="material-icons" cdkDragHandle>reorder</i>
+    </div>
+    <div class="w-100 drag-content">
+      <mat-checkbox > {{ artist }} </mat-checkbox>
+      <ul>
+          <!-- <li class="text" *ngFor="let item of items | async">
+            {{item.name}}
+          </li> -->
+        </ul>
+
+        
+        </div> 
+ 
+      </div>
+    </div>
+<div class="row">
+
+</div>
+</div>
+
+
